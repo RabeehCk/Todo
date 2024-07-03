@@ -153,3 +153,12 @@ class Update_user(View):
         form = Register(instance=data)
 
         return render(request,"register.html",{"form":form})
+    
+    def post(self,request,**kwargs):
+        id = kwargs.get("pk")
+        data = User.objects.get(id=id)
+        form = Register(request.POST,instance=data)
+        if form.is_valid():
+            form.save()
+
+        return redirect("login")

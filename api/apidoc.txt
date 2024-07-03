@@ -1,0 +1,62 @@
+
+method : post
+url : http://127.0.0.1:8000/api/register/
+data : {
+  "username": "Sanjay",
+  "email": "rabeeh@gmail.com",
+  "password": "sanjay1234",
+  "first_name": "Sanjay",
+  "last_name": "C K"
+}
+
+=====================================================================================
+
+method : get
+url : http://127.0.0.1:8000/api/todos/
+data : nil
+
+=====================================================================================
+
+method : post
+url : http://127.0.0.1:8000/api/todos/
+data : {
+    "task_name": "fee",
+    "task_description": "null"
+}
+
+=====================================================================================
+
+method : delete
+url : http://127.0.0.1:8000/api/todos/25
+data : nil
+
+=====================================================================================
+
+method : update
+url : http://127.0.0.1:8000/api/todos/25
+data : {
+    "task_name": "Fee",
+    "task_description": "College"
+}
+
+=====================================================================================
+
+method : retrieve
+url : http://127.0.0.1:8000/api/todos/25
+data : nil
+
+=====================================================================================
+
+1) API for fetching token
+
+    url : http://127.0.0.1:8000/api/token/
+    method : post
+    body : {username,password}
+
+
+2) API for adding new task
+
+    url : http://127.0.0.1:8000/api/todos/
+    method : post
+    body : {task_name,rask_description}
+    authorization : token

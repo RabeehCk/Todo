@@ -12,7 +12,7 @@ class Register(forms.ModelForm):
             'first_name':forms.TextInput(attrs={'class':'form-control','placeholder':'Enter your first name'}),
             'last_name':forms.TextInput(attrs={'class':'form-control','placeholder':'Enter your last name'}),
             'email':forms.EmailInput(attrs={'class':'form-control','placeholder':'Enter your email'}),
-            'password':forms.PasswordInput(attrs={'class':'form-control','placeholder':'Enter your password'}),
+            'password':forms.TextInput(attrs={'class':'form-control','placeholder':'Enter your password'}),
         }
 
 

@@ -9,3 +9,6 @@ class taskmodel(models.Model):
     created_date = models.DateField(auto_now_add=True)
     user = models.ForeignKey(User,on_delete=models.CASCADE,null=True)
     completed = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.task_name
